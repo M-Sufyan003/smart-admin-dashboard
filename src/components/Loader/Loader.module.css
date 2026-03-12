@@ -1,0 +1,125 @@
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.startup {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0d;
+  z-index: 9999;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 0;
+}
+
+.startupInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.logoMark {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.logoDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c9a84c;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.logoDot:nth-child(2) {
+  animation-delay: 0.15s;
+  background: #e8d5a3;
+}
+
+.logoDot:nth-child(3) {
+  animation-delay: 0.3s;
+  background: #f0e8c8;
+}
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #5a5760;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.progressBar {
+  width: 200px;
+  height: 2px;
+  background: #1a1a24;
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #c9a84c, #e8d5a3);
+  border-radius: 1px;
+  animation: load 1.6s ease-out forwards;
+}
+
+/* Page loader spinner */
+.spinner {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--accent);
+  animation: spin 0.8s linear infinite;
+}
+
+.ring:nth-child(2) {
+  inset: 6px;
+  border-top-color: var(--accent-4);
+  animation-duration: 1.2s;
+  animation-direction: reverse;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes load {
+  0% { width: 0%; }
+  60% { width: 75%; }
+  100% { width: 100%; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
