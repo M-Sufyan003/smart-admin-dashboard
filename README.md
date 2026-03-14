@@ -44,12 +44,11 @@ The layout includes:
 
 The interface is fully responsive across **desktop, tablet, and mobile devices**.
 
-### API Integration
-User data is fetched dynamically using **Axios** from a mock API.
+### Mock API Integration
 
-Example API used:
+This project uses **JSONPlaceholder**, a free fake REST API for testing and prototyping.
 
-https://jsonplaceholder.typicode.com/users
+https://jsonplaceholder.typicode.com
 
 ### Search and Filtering
 Users can filter table data in real time using a search input without refreshing the page.
@@ -126,7 +125,7 @@ Clone the repository:
 
 ```
 
-git clone [https://github.com/M-Sufyan003/smart-admin-dashboard.git]
+git clone https://github.com/M-Sufyan003/smart-admin-dashboard.git
 
 ```
 
