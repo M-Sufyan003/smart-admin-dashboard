@@ -9,7 +9,7 @@ The project simulates a real-world admin panel where users can view dashboard st
 
 ## Live Demo
 
-*(Add your deployed link here later)*
+https://smart-admin-dashboard.netlify.app/
 
 
 
