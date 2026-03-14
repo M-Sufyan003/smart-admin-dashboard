@@ -23,6 +23,7 @@ function Dashboard() {
       setLoading(true)
       setError(null)
       const data = await fetchUsers()
+      // console.log(data);
       setUsers(data)
     } catch (err) {
       setError('Failed to load users. Please try again.')
@@ -46,7 +47,7 @@ function Dashboard() {
 
   return (
     <div className={styles.page}>
-      <SummaryCards />
+      <SummaryCards totalUsers={users.length}/>
 
       <div className={styles.tableSection}>
         <div className={styles.tableHeader}>
